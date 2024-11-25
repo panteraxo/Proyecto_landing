@@ -11,7 +11,7 @@ function Header() {
         <a href="#">Inicio</a>
         <a href="#">Servicios</a>
         <a href="#">Sobre nosotros</a>
-        <a href="#">Beneficios</a>
+        <a href="#">Testimonios</a>
         <a href="#">Contacto</a>
       </div>
       <div>

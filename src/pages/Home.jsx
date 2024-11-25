@@ -1,9 +1,5 @@
 import React from "react";
-import img1 from "../assets/images/img1.png";
-import img2 from "../assets/images/img2.png";
-import img3 from "../assets/images/img3.png";
 import Carousel from "../components/carousel/Carousel";
-import Service from "./Service";
 function Home() {
   return (
     <section className="grid grid-cols-2">
@@ -11,10 +7,13 @@ function Home() {
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-e2 md:text-5xl lg:text-6xl ">
           ¡Bienvenidos a Rapix!
         </h1>
-        <p className="mb-8 text-lg font-normal text-e1 lg:text-xl sm:px-16 lg:px-48 ">
-          En Rapix, nos dedicamos a la venta de productos de tecnología de alta{" "}
-          calidad. Nuestro objetivo es ofrecer la mejor experiencia de compra a{" "}
-          nuestros clientes.
+        <p className="mb-8 text-lg font-normal text-e1 lg:text-xl sm:px-16  ">
+          Conecta tus destinos con rapidez y confianza. En Rapix, ofrecemos
+          <br />
+          soluciones de mensajería personalizadas, entregas rápidas y seguras, y
+          atención profesional para satisfacer todas tus necesidades de
+          transporte de documentos y paquetes. <br /> ¡Descubre cómo podemos
+          simplificar tu día!
         </p>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
           <a
