@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html {
+  scroll-behavior: smooth;
+}
 @font-face {
     font-family: 'Poppins';
     src: url('/assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
@@ -44,7 +46,7 @@
 .background {
   width: 80%;
   height: 70%;
-  background-color: #A5A2A2; 
+  background-color: #E5E5E5; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,4 +91,95 @@
 
 .dot.active {
   background-color: #0D0C0C; 
+}
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 20px; 
+  background-color: white;
+  border-bottom: #A5A2A2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom: 1px solid #E5E5E5;
+  
+}
+
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  
+}
+
+.navbar a {
+  position: relative;
+  font-size: 18px;
+  color: #dd2020;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #dd2020;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+  transition: width 0.5s;
+}
+
+
+.hamburger {
+  display: none; 
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 3px;
+  background-color: #dd2020;
+  border-radius: 2px;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    display: none; 
+  }
+  .login {
+    display: none;
+  }
+  .navbar.open {
+    display: flex; 
+  }
+
+  .hamburger {
+    display: flex; 
+  }
 }

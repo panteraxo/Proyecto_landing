@@ -12,10 +12,48 @@ import { Star } from "lucide-react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
+import TestimonialCard from "./TestimonialCard";
+const testimonials = [
+  {
+    image: B01,
+    name: "Roberto Fernandez",
+    review:
+      "El servicio de mensajería ha sido excelente. Envié un paquete importante y llegó el mismo día sin ningún problema. Son puntuales y profesionales, lo cual genera mucha confianza.",
+  },
+  {
+    image: B02,
+    name: "Ana Martínez",
+    review:
+      "¡Increíble servicio! Me ayudaron a enviar un paquete a tiempo para un evento familiar. Muy recomendable.",
+  },
+  {
+    image: B03,
+    name: "Luis Gómez",
+    review:
+      "Atención impecable y entrega rápida. Estoy satisfecho y seguiré usando sus servicios.",
+  },
+  {
+    image: B04,
+    name: "Carla López",
+    review:
+      "Es la mejor empresa de mensajería que he usado hasta ahora. Mi paquete llegó sin contratiempos.",
+  },
+  {
+    image: B05,
+    name: "Jorge Silva",
+    review:
+      "Excelente comunicación y puntualidad. Definitivamente lo recomiendo.",
+  },
+  {
+    image: B06,
+    name: "Laura Torres",
+    review:
+      "Un servicio confiable y eficiente. Me gustó mucho la facilidad de seguimiento de mi paquete.",
+  },
+];
 const SliderTes = () => {
   return (
-    <div className="slider-container">
+    <div className="slider-container relative">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -32,196 +70,18 @@ const SliderTes = () => {
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
-          clickable: true,
         }}
         modules={[EffectCoverflow, Navigation]}
       >
-        <SwiperSlide>
-          <div class="max-w-sm bg-e4 border text-e1 border-e4 rounded-lg shadow ">
-            <div class="p-5">
-              <div className="flex flex-row mb-4 justify-center">
-                <img
-                  alt=""
-                  src={B01}
-                  className="size-14 rounded-full object-cover"
-                />
-                <div className="ml-4">
-                  <div className="flex justify-center gap-0.5 ">
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                  </div>
-                  <p className="mt-0.5 text-lg font-medium text-e1">
-                    Roberto Fernandez
-                  </p>
-                </div>
-              </div>
-              <div>
-                "El servicio de mensajería ha sido excelente. Envié un paquete
-                importante y llegó el mismo día sin ningún problema. Son
-                puntuales y profesionales, lo cual genera mucha confianza.
-                Definitivamente seguiré usando este servicio."
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div class="max-w-sm bg-e4 border text-e1 border-e4 rounded-lg shadow ">
-            <div class="p-5">
-              <div className="flex flex-row mb-4 justify-center">
-                <img
-                  alt=""
-                  src={B02}
-                  className="size-14 rounded-full object-cover"
-                />
-                <div className="ml-4">
-                  <div className="flex justify-center gap-0.5 ">
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                  </div>
-                  <p className="mt-0.5 text-lg font-medium text-e1">
-                    Roberto Fernandez
-                  </p>
-                </div>
-              </div>
-              <div>
-                "El servicio de mensajería ha sido excelente. Envié un paquete
-                importante y llegó el mismo día sin ningún problema. Son
-                puntuales y profesionales, lo cual genera mucha confianza.
-                Definitivamente seguiré usando este servicio."
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div class="max-w-sm bg-e4 border text-e1 border-e4 rounded-lg shadow ">
-            <div class="p-5">
-              <div className="flex flex-row mb-4 justify-center">
-                <img
-                  alt=""
-                  src={B03}
-                  className="size-14 rounded-full object-cover"
-                />
-                <div className="ml-4">
-                  <div className="flex justify-center gap-0.5 ">
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                  </div>
-                  <p className="mt-0.5 text-lg font-medium text-e1">
-                    Roberto Fernandez
-                  </p>
-                </div>
-              </div>
-              <div>
-                "El servicio de mensajería ha sido excelente. Envié un paquete
-                importante y llegó el mismo día sin ningún problema. Son
-                puntuales y profesionales, lo cual genera mucha confianza.
-                Definitivamente seguiré usando este servicio."
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div class="max-w-sm bg-e4 border text-e1 border-e4 rounded-lg shadow ">
-            <div class="p-5">
-              <div className="flex flex-row mb-4 justify-center">
-                <img
-                  alt=""
-                  src={B04}
-                  className="size-14 rounded-full object-cover"
-                />
-                <div className="ml-4">
-                  <div className="flex justify-center gap-0.5 ">
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                  </div>
-                  <p className="mt-0.5 text-lg font-medium text-e1">
-                    Roberto Fernandez
-                  </p>
-                </div>
-              </div>
-              <div>
-                "El servicio de mensajería ha sido excelente. Envié un paquete
-                importante y llegó el mismo día sin ningún problema. Son
-                puntuales y profesionales, lo cual genera mucha confianza.
-                Definitivamente seguiré usando este servicio."
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div class="max-w-sm bg-e4 border text-e1 border-e4 rounded-lg shadow ">
-            <div class="p-5">
-              <div className="flex flex-row mb-4 justify-center">
-                <img
-                  alt=""
-                  src={B05}
-                  className="size-14 rounded-full object-cover"
-                />
-                <div className="ml-4">
-                  <div className="flex justify-center gap-0.5 ">
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                  </div>
-                  <p className="mt-0.5 text-lg font-medium text-e1">
-                    Roberto Fernandez
-                  </p>
-                </div>
-              </div>
-              <div>
-                "El servicio de mensajería ha sido excelente. Envié un paquete
-                importante y llegó el mismo día sin ningún problema. Son
-                puntuales y profesionales, lo cual genera mucha confianza.
-                Definitivamente seguiré usando este servicio."
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div class="max-w-sm bg-e4 border text-e1 border-e4 rounded-lg shadow ">
-            <div class="p-5">
-              <div className="flex flex-row mb-4 justify-center">
-                <img
-                  alt=""
-                  src={B06}
-                  className="size-14 rounded-full object-cover"
-                />
-                <div className="ml-4">
-                  <div className="flex justify-center gap-0.5 ">
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                    <Star fill="yellow" className="size-9 text-yellow-400" />
-                  </div>
-                  <p className="mt-0.5 text-lg font-medium text-e1">
-                    Roberto Fernandez
-                  </p>
-                </div>
-              </div>
-              <div>
-                "El servicio de mensajería ha sido excelente. Envié un paquete
-                importante y llegó el mismo día sin ningún problema. Son
-                puntuales y profesionales, lo cual genera mucha confianza.
-                Definitivamente seguiré usando este servicio."
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
+        {testimonials.map((testimonial, index) => (
+          <SwiperSlide key={index}>
+            <TestimonialCard
+              image={testimonial.image}
+              name={testimonial.name}
+              review={testimonial.review}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

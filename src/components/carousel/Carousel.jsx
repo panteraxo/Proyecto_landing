@@ -14,7 +14,7 @@ function Carousel() {
   }, [images.length]);
 
   return (
-    <div className="carousel-container">
+    <div className="carousel-container dark:bg-e3 h-full">
       <div className="background">
         <div className="carousel">
           <img src={images[current]} alt={`carousel item ${current}`} />

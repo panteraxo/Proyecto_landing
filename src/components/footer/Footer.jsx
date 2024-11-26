@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import logo2 from "../../assets/images/logo2.png";
 
 function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const toggleModal = () => setIsModalOpen(!isModalOpen);
   return (
-    <footer class="bg-e4 ">
+    <footer class="bg-e3 dark:bg-e1">
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
@@ -14,27 +16,27 @@ function Footer() {
           <div class="sm:flex sm:items-center sm:justify-between">
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-e2 sm:mb-0 ">
               <li>
-                <a href="#" class="hover:underline me-4 md:me-6">
+                <a href="#home" class="hover:underline me-4 md:me-6">
                   Inicio
                 </a>
               </li>
               <li>
-                <a href="#" class="hover:underline me-4 md:me-6">
+                <a href="#service" class="hover:underline me-4 md:me-6">
                   Servicios
                 </a>
               </li>
               <li>
-                <a href="#" class="hover:underline me-4 md:me-6">
+                <a href="#aboutus" class="hover:underline me-4 md:me-6">
                   Sobre nosotros
                 </a>
               </li>
               <li>
-                <a href="#" class="hover:underline me-4 md:me-6">
+                <a href="#testimonial" class="hover:underline me-4 md:me-6">
                   Testimonios
                 </a>
               </li>
               <li>
-                <a href="#" class="hover:underline">
+                <a href="#contact" class="hover:underline">
                   Contacto
                 </a>
               </li>
@@ -50,7 +52,89 @@ function Footer() {
             </a>
             . All Rights Reserved.
           </span>
+
           <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <p className="mr-4 ">
+              <button onClick={toggleModal} className="text-e3 dark:text-e2">
+                Términos y Servicios
+              </button>
+            </p>
+            {isModalOpen && (
+              <div className="fixed inset-0 bg-gray-700 bg-opacity-50 flex overflow-auto  items-center justify-center z-50">
+                <div className="bg-white p-8 rounded-lg w-4/5 ">
+                  <h2 className="text-2xl font-bold">Términos y Servicios</h2>
+                  <p>
+                    Términos y Condiciones de Servicio - Rapix <br />
+                    1. Aceptación de los Términos Al utilizar los servicios de
+                    Rapix, usted acepta los términos y condiciones establecidos
+                    en este acuerdo. Si no está de acuerdo con alguna de las
+                    condiciones, no utilice nuestros servicios.
+                    <br /> 2. Descripción del Servicio Rapix es una plataforma
+                    de mensajería y entrega que facilita la conexión entre los
+                    usuarios y nuestros mensajeros para el envío y recepción de
+                    paquetes dentro de las áreas geográficas de operación.
+                    <br /> 3. Registro de Usuario Para utilizar los servicios de
+                    Rapix, los usuarios deben crear una cuenta proporcionando
+                    información veraz y actualizada. El usuario es responsable
+                    de mantener la confidencialidad de sus credenciales y de
+                    todas las actividades realizadas en su cuenta.
+                    <br /> 4. Tarifas y Pagos Los precios por el servicio de
+                    mensajería varían según el tipo de envío, el peso del
+                    paquete y la distancia de entrega. Los pagos se realizarán a
+                    través de la plataforma utilizando los métodos de pago
+                    disponibles. Rapix se reserva el derecho de modificar las
+                    tarifas en cualquier momento, notificando a los usuarios con
+                    antelación.
+                    <br /> 5. Uso Aceptable El usuario se compromete a no
+                    utilizar los servicios de Rapix para el envío de artículos
+                    ilegales, peligrosos o prohibidos. Cualquier infracción
+                    podrá resultar en la cancelación de la cuenta y en acciones
+                    legales si corresponde.
+                    <br /> 6. Responsabilidad Rapix se compromete a entregar los
+                    paquetes dentro del plazo estimado, pero no garantiza un
+                    tiempo exacto debido a factores fuera de su control
+                    (tráfico, condiciones climáticas, etc.). En caso de daño o
+                    pérdida de un paquete, Rapix ofrece un proceso de
+                    reclamación que se revisará según las políticas internas.
+                    <br /> 7. Propiedad Intelectual Todos los derechos sobre el
+                    contenido, diseño y software de la plataforma Rapix son
+                    propiedad exclusiva de la empresa y están protegidos por las
+                    leyes de propiedad intelectual. No se permite la
+                    reproducción, distribución o uso no autorizado de dichos
+                    materiales.
+                    <br /> 8. Modificación de los Términos Rapix se reserva el
+                    derecho de modificar estos términos en cualquier momento.
+                    Las modificaciones se aplicarán a partir de su publicación
+                    en la plataforma. Es responsabilidad del usuario revisar
+                    periódicamente los términos para estar al tanto de cualquier
+                    cambio.
+                    <br /> 9. Privacidad El uso de la plataforma está sujeto a
+                    nuestra Política de Privacidad, que describe cómo
+                    recopilamos, utilizamos y protegemos la información personal
+                    de los usuarios.
+                    <br /> 10. Terminación Rapix puede suspender o cancelar el
+                    acceso de un usuario a la plataforma en caso de violación de
+                    los términos o por cualquier otra razón que considere
+                    necesaria para proteger el buen funcionamiento de los
+                    servicios.
+                    <br /> 11. Ley Aplicable Este acuerdo se regirá por las
+                    leyes del país en el que Rapix opera. Cualquier disputa
+                    relacionada con los servicios de Rapix será resuelta en los
+                    tribunales competentes de dicha jurisdicción.
+                    <br /> 12. Contacto Para cualquier pregunta o aclaración
+                    sobre estos Términos y Condiciones, puede contactarnos a
+                    través de nuestro servicio de atención al cliente en
+                    contacto@rapix.com.
+                  </p>
+                  <button
+                    onClick={toggleModal}
+                    className="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+                  >
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            )}
             <a
               href="https://www.facebook.com/maki.ds.9/"
               class="text-e2 hover:text-gray-900 dark:hover:text-white"

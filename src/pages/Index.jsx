@@ -8,13 +8,13 @@ import Footer from "../components/footer/Footer";
 
 function Index() {
   return (
-    <main>
-      <Home />
-      <Service />
-      <AboutUs />
-      <Testimonial />
-      <Contact />
-      <Footer />
+    <main className="dark:bg-e3">
+      <Home id="home" />
+      <Service id="service" />
+      <AboutUs id="aboutus" />
+      <Testimonial id="testimonial" />
+      <Contact id="contact" />
+      <Footer id="footer" />
     </main>
   );
 }
