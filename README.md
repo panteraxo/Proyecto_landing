@@ -13,7 +13,7 @@ git clone https://github.com/panteraxo/Proyecto_landing.git
 3. Navegar al Directorio del Proyecto
 Accede al directorio del proyecto:
 
-cd Proyecto_landing
+cd proyecto_rapix
 
 4. Instalar Dependencias
 Ejecuta el siguiente comando para instalar las dependencias necesarias:
